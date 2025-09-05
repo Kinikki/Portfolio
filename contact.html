@@ -19,7 +19,7 @@
         <li><a href="background.html">Background</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -29,7 +29,8 @@
       <section id="contact">
         <h2>Send Me a Message</h2>
         <div class="form-wrapper">
-          <form action="mailto:mary.brown93790@gmail.com" method="post" enctype="text/plain">
+          <!-- Formspree contact form -->
+          <form action="https://formspree.io/f/xdklpyar" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -41,17 +42,17 @@
 
             <fieldset>
               <legend>Preferred Contact Method</legend>
-              <label><input type="radio" name="contact" value="email"> Email</label>
-              <label><input type="radio" name="contact" value="phone"> Phone</label>
-              <label><input type="radio" name="contact" value="text"> Text</label>
+              <label><input type="radio" name="contact_method" value="email"> Email</label>
+              <label><input type="radio" name="contact_method" value="phone"> Phone</label>
+              <label><input type="radio" name="contact_method" value="text"> Text</label>
             </fieldset>
 
             <fieldset>
               <legend>Topics of Interest</legend>
-              <label><input type="checkbox" name="topic" value="html"> HTML</label>
-              <label><input type="checkbox" name="topic" value="css"> CSS</label>
-              <label><input type="checkbox" name="topic" value="js"> JavaScript</label>
-              <label><input type="checkbox" name="topic" value="work"> Career Opportunities</label>
+              <label><input type="checkbox" name="topics[]" value="html"> HTML</label>
+              <label><input type="checkbox" name="topics[]" value="css"> CSS</label>
+              <label><input type="checkbox" name="topics[]" value="js"> JavaScript</label>
+              <label><input type="checkbox" name="topics[]" value="work"> Career Opportunities</label>
             </fieldset>
 
             <label for="message">Message:</label>
