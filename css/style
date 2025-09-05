@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap');
+/* =======================
+   ROOT VARIABLES
+   - Theme colors and font settings
+======================= */
+:root {
+    --accent: #1589FF;
+    --text-light: #f0faff;
+    --bg-dark: #0a0a0a;
+}
+
+/* =======================
+   RESET & BASE STYLES
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    padding: 2em;
+    position: relative;
+}
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url('../images/bubbleback.jpg') no-repeat center/cover fixed;
+        opacity: 0.25;
+        z-index: -1;
+    }
+
+/* =======================
+   HEADER & NAVIGATION
+======================= */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--accent);
+    animation: pulseTitle 2.5s ease-in-out infinite;
+    text-shadow: none;
+}
+
+h2 {
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--text-light);
+        font-size: 1.1rem;
+        padding: 12px 20px;
+        border: 2px solid var(--accent);
+        border-radius: 8px;
+        background-color: rgba(21, 137, 255, 0.2);
+        transition: all 0.3s ease;
+    }
+
+        nav ul li a:hover {
+            background-color: var(--accent);
+            color: #000;
+            transform: scale(1.05);
+        }
+
+/* =======================
+   SCROLL TEXT BANNER
+======================= */
+.scroll-text {
+    font-size: 1.1rem;
+    color: var(--accent);
+    background-color: rgba(21, 137, 255, 0.1);
+    padding: 1em;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    animation: fadeInScroll 1.5s ease-in-out;
+}
+
+@keyframes fadeInScroll {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =======================
+   MAIN LAYOUT
+======================= */
+main.two-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em 1em;
+}
+
+.form-column,
+.tutorial-column {
+    flex: 1 1 600px;
+    max-width: 700px;
+}
+
+aside {
+    flex: 1 1 300px;
+    max-width: 300px;
+    text-align: center;
+    margin-top: 2em;
+}
+
+    aside h3 {
+        color: var(--accent);
+        margin-bottom: 1em;
+    }
+
+    aside p,
+    aside a {
+        color: var(--text-light);
+        font-size: 1rem;
+    }
+
+.center-column {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+}
+
+    .center-column section,
+    .center-column article {
+        margin-bottom: 2em;
+    }
+
+p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* =======================
+   CONTACT FORM SECTION
+======================= */
+#contact {
+    text-align: center;
+    margin: 3em auto;
+    padding: 2em 1em;
+}
+
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2em 1em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* ✅ Aligns form elements to the left */
+    text-align: left; /* ✅ Prevents inherited centering */
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; /* ✅ Keeps the form box centered */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(21, 137, 255, 0.3);
+}
+
+    form label,
+    form input,
+    form textarea,
+    form fieldset {
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 1em;
+    }
+
+    form label {
+        font-weight: 600;
+        color: var(--accent);
+        text-align: left;
+    }
+
+    form input,
+    form textarea {
+        padding: 10px;
+        border: 1px solid var(--accent);
+        border-radius: 6px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: var(--text-light);
+        font-size: 1rem;
+    }
+
+        form input:focus,
+        form textarea:focus {
+            outline: none;
+            border-color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+    /* =======================
+   FIELDSETS
+======================= */
+    form fieldset {
+        padding: 1em;
+        border-radius: 6px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 1px solid var(--accent);
+        text-align: left;
+    }
+
+        form fieldset legend {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.5em;
+            font-size: 1.1rem;
+        }
+
+        form fieldset label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 0.75em;
+            color: var(--text-light);
+            font-size: 1rem;
+            justify-content: flex-start;
+            line-height: 1.4;
+        }
+
+    form input[type="radio"],
+    form input[type="checkbox"] {
+        accent-color: var(--accent);
+        margin: 0;
+        transform: none;
+        vertical-align: middle;
+        width: 18px;
+        height: 18px;
+    }
+
+
+/* =======================
+   FORM BUTTONS
+======================= */
+.form-buttons-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1em;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+    .form-buttons button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        background-color: var(--accent);
+        color: var(--bg-dark);
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+        .form-buttons button:hover {
+            background-color: rgba(21, 137, 255, 0.8);
+            color: var(--text-light);
+            transform: scale(1.05);
+        }
+
+
+/* =======================
+   VIDEO EMBED (CONTACT PAGE)
+======================= */
+.tutorial-column iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.tutorial-column p {
+    text-align: left;
+    margin-top: 1em;
+}
+.video-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+
+/* =======================
+   TABLES
+======================= */
+.centered-chart {
+    overflow-x: auto;
+    margin-top: 2em;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #222;
+    color: #eee;
+    font-size: 0.95em;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+    .info-table th,
+    .info-table td {
+        border: 1px solid #444;
+        padding: 0.75em;
+        text-align: left;
+        font-style: normal;
+        text-shadow: none;
+    }
+
+    .info-table th {
+        background-color: #333;
+        color: var(--accent);
+        font-weight: bold;
+    }
+
+    .info-table tbody tr:nth-child(even),
+    .info-table tfoot tr:nth-child(even) {
+        background-color: #1a1a1a;
+    }
+
+    .info-table tbody tr:nth-child(odd),
+    .info-table tfoot tr:nth-child(odd) {
+        background-color: #222;
+    }
+
+    .info-table tbody tr:hover,
+    .info-table tfoot tr:hover {
+        background-color: #333;
+    }
+
+    .info-table caption {
+        caption-side: top;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #ccc;
+    }
+/* =======================
+   INDEX PAGE TABLE
+   - Narrower and centered
+======================= */
+.index-table {
+    max-width: 700px; /* Adjust width as needed */
+    margin: 2em auto; /* Centers the table horizontally */
+    padding: 1em; /* Optional: adds breathing room */
+}
+
+/* =======================
+   QUOTES & GALLERY
+   - Centered quotes and image gallery layout
+======================= */
+.center-quote {
+    text-align: center;
+    font-style: italic;
+    margin: 2em auto;
+    max-width: 600px;
+    color: var(--accent);
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    margin-bottom: 3em;
+}
+
+    .gallery figure {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .gallery img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.3);
+    }
+
+/* =======================
+   FOOTER
+   - Footer layout and link styling
+======================= */
+footer
+
+{
+    width: 100%;
+    text-align: center;
+    padding: 2em 0;
+    background-color: #000;
+    color: #ccc;
+    margin-top: auto;
+}
+
+    footer a {
+        color: var(--accent);
+        text-decoration: none;
+    }
+
+/* =======================
+   ANIMATIONS
+   - Title pulse effect
+======================= */
+@keyframes pulseTitle {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+   - Layout adjustments for tablets and phones
+======================= */
+@media (max-width: 768px) {
+    main.two-column {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-column,
+    .tutorial-column,
+    aside {
+        max-width: 100%;
+    }
+
+    .video-wrapper iframe {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .info-table {
+        font-size: 0.85em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-buttons-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
