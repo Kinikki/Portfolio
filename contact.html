@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me</title>
+  <meta name="description" content="Get in touch with Mary.">
+  <meta name="keywords" content="contact, form, email, message">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+  <header>
+    <h1>Let's Connect 💌</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="background.html">Background</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="two-column">
+    <article class="form-column">
+      <section id="contact">
+        <h2>Send Me a Message</h2>
+        <div class="form-wrapper">
+          <form action="mailto:mary.brown93790@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <fieldset>
+              <legend>Preferred Contact Method</legend>
+              <label><input type="radio" name="contact" value="email"> Email</label>
+              <label><input type="radio" name="contact" value="phone"> Phone</label>
+              <label><input type="radio" name="contact" value="text"> Text</label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Topics of Interest</legend>
+              <label><input type="checkbox" name="topic" value="html"> HTML</label>
+              <label><input type="checkbox" name="topic" value="css"> CSS</label>
+              <label><input type="checkbox" name="topic" value="js"> JavaScript</label>
+              <label><input type="checkbox" name="topic" value="work"> Career Opportunities</label>
+            </fieldset>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <div class="form-buttons-wrapper">
+              <div class="form-buttons">
+                <button type="submit">Send</button>
+                <button type="reset">Reset</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </article>
+
+    <article class="tutorial-column">
+      <section id="tutorials">
+        <h2>Recommended Tutorials</h2>
+
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/dX8396ZmSPk" allowfullscreen></iframe>
+          <figcaption>Build a Portfolio Website with HTML & CSS – freeCodeCamp</figcaption>
+        </div>
+
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/vLnPwxZdW4Y" allowfullscreen></iframe>
+          <figcaption>C++ Tutorial for Beginners – freeCodeCamp</figcaption>
+        </div>
+
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/ABPNEjAUmXQ" allowfullscreen></iframe>
+          <figcaption>Modern C++ Networking Fundamentals – CodeLucky</figcaption>
+        </div>
+      </section>
+    </article>
+
+    <aside>
+      <h3>Other Ways to Connect</h3>
+      <p>📧 Email: Mary.Brown93790@gmail.com</p>
+      <p>💻 GitHub: <a href="https://github.com/kinikki" target="_blank">kinikki</a></p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 Mary’s Tech Portfolio | <a href="https://github.com/kinikki" target="_blank">GitHub</a></p>
+  </footer>
+</body>
+</html>
