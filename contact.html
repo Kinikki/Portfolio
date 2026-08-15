@@ -1,18 +1,29 @@
+html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!--
+       Author: Mary Brown
+       Updated: 08/15/2026
+       Filename: contact.html
+  -->
+
   <meta charset="UTF-8">
-  <title>Contact Me</title>
-  <meta name="description" content="Get in touch with Mary.">
-  <meta name="keywords" content="contact, form, email, message">
+  <title>Mary Brown | Contact</title>
+  <meta name="description" content="Contact Mary Brown about software development, QA testing, and technology opportunities.">
+  <meta name="keywords" content="contact, software developer, QA tester, technology, career opportunities">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/print.css" media="print">
 </head>
+
 <body>
+
   <header>
-    <h1>Let's Connect 💌</h1>
+    <h1>Let's Connect</h1>
+
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -24,81 +35,105 @@
     </nav>
   </header>
 
-  <main class="two-column">
-    <article class="form-column">
-      <section id="contact">
-        <h2>Send Me a Message</h2>
-        <div class="form-wrapper">
-          <!-- Formspree contact form -->
-          <form action="https://formspree.io/f/xdklpyar" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+  <main>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+    <section class="contact-intro">
+      <h2>Contact Me</h2>
 
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone">
+      <p>
+        I'm currently interested in opportunities in software development,
+        quality assurance, software testing, and related technology roles.
+      </p>
 
-            <fieldset>
-              <legend>Preferred Contact Method</legend>
-              <label><input type="radio" name="contact_method" value="email"> Email</label>
-              <label><input type="radio" name="contact_method" value="phone"> Phone</label>
-              <label><input type="radio" name="contact_method" value="text"> Text</label>
-            </fieldset>
+      <p>
+        If you'd like to discuss an opportunity, project, or potential
+        collaboration, feel free to send me a message below.
+      </p>
+    </section>
 
-            <fieldset>
-              <legend>Topics of Interest</legend>
-              <label><input type="checkbox" name="topics[]" value="html"> HTML</label>
-              <label><input type="checkbox" name="topics[]" value="css"> CSS</label>
-              <label><input type="checkbox" name="topics[]" value="js"> JavaScript</label>
-              <label><input type="checkbox" name="topics[]" value="work"> Career Opportunities</label>
-            </fieldset>
+    <section class="contact-section">
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+      <div class="form-wrapper">
 
-            <div class="form-buttons-wrapper">
-              <div class="form-buttons">
-                <button type="submit">Send</button>
-                <button type="reset">Reset</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
-    </article>
+        <form action="https://formspree.io/f/xdklpyar" method="POST">
 
-    <article class="tutorial-column">
-      <section id="tutorials">
-        <h2>Recommended Tutorials</h2>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+          >
 
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/dX8396ZmSPk" allowfullscreen></iframe>
-          <figcaption>Build a Portfolio Website with HTML & CSS – freeCodeCamp</figcaption>
-        </div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+          >
 
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/vLnPwxZdW4Y" allowfullscreen></iframe>
-          <figcaption>C++ Tutorial for Beginners – freeCodeCamp</figcaption>
-        </div>
+          <label for="company">Company or Organization</label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+          >
 
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/ABPNEjAUmXQ" allowfullscreen></iframe>
-          <figcaption>Modern C++ Networking Fundamentals – CodeLucky</figcaption>
-        </div>
-      </section>
-    </article>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+          ></textarea>
 
-    <aside>
-      <h3>Other Ways to Connect</h3>
-      <p>📧 Email: Mary.Brown93790@gmail.com</p>
-      <p>💻 GitHub: <a href="https://github.com/kinikki" target="_blank">kinikki</a></p>
-    </aside>
+          <button type="submit">Send Message</button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+    <section class="contact-links">
+
+      <h2>Other Ways to Connect</h2>
+
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:Mary.Brown93790@gmail.com">
+          Mary.Brown93790@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <strong>GitHub:</strong>
+        <a
+          href="https://github.com/kinikki"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          github.com/kinikki
+        </a>
+      </p>
+
+    </section>
+
   </main>
 
   <footer>
-    <p>© 2025 Mary’s Tech Portfolio | <a href="https://github.com/kinikki" target="_blank">GitHub</a></p>
+    <p>
+      &copy; 2026 Mary Brown |
+      <a
+        href="https://github.com/kinikki"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+    </p>
   </footer>
+
 </body>
 </html>
