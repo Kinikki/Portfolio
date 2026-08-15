@@ -1,346 +1,208 @@
-```html
+html
 <!DOCTYPE html>
-<!--
-     Author: Mary Brown
-     Updated: 08/15/2026
-     Filename: skills.html
--->
 <html lang="en">
+
 <head>
+  <!--
+       Author: Mary Brown
+       Updated: 08/15/2026
+       Filename: skills.html
+  -->
+
   <meta charset="UTF-8">
+
   <title>Mary Brown | Technical Skills</title>
-  <meta name="description" content="Technical skills of Mary Brown, including software development, databases, web technologies, QA testing, and development tools.">
-  <meta name="keywords" content="software development, Java, C#, ASP.NET, SQL, HTML, CSS, JavaScript, QA testing, GitHub">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Technical skills of Mary Brown including software development, web development, databases, QA testing, and development tools."
+  >
+
+  <meta
+    name="keywords"
+    content="Java, C#, C++, ASP.NET Core, SQL, MySQL, HTML, CSS, JavaScript, QA testing, GitHub"
+  >
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/print.css" media="print">
 </head>
 
+
 <body>
 
   <header>
+
     <h1>Technical Skills</h1>
+
+    <p>Technologies and tools I've worked with through development, testing, and professional experience.</p>
 
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="background.html">Background</a></li>
-        <li><a href="skills.html">Skills</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
   </header>
 
+
   <main>
-    <div class="center-column">
 
-      <section>
-        <h2>Programming & Development</h2>
+    <div class="skills-grid">
 
-        <div class="centered-chart">
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th>Technology</th>
-                <th>Experience</th>
-              </tr>
-            </thead>
 
-            <tbody>
-              <tr>
-                <td><strong>Java</strong></td>
-                <td>
-                  Object-oriented programming, collections, generics, streams,
-                  data structures, file handling, GUI development, and debugging.
-                </td>
-              </tr>
+      <section class="skill-card">
 
-              <tr>
-                <td><strong>C#</strong></td>
-                <td>
-                  Object-oriented development, application logic, validation,
-                  debugging, and ASP.NET Core MVC projects.
-                </td>
-              </tr>
+        <h2>Programming</h2>
 
-              <tr>
-                <td><strong>C++</strong></td>
-                <td>
-                  Object-oriented programming, data structures, linked lists,
-                  sorting algorithms, queues, and problem solving.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>JavaScript</strong></td>
-                <td>
-                  Client-side scripting, page interaction, form behavior,
-                  and web application functionality.
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="skill-tags">
+          <span>Java</span>
+          <span>C#</span>
+          <span>C++</span>
+          <span>JavaScript</span>
         </div>
+
+        <p>
+          Experience with object-oriented programming, application logic,
+          collections, data structures, validation, algorithms, debugging,
+          file handling, and problem solving.
+        </p>
+
       </section>
 
-      <section>
+
+      <section class="skill-card">
+
         <h2>Web Development</h2>
 
-        <div class="centered-chart">
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th>Technology</th>
-                <th>Experience</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td><strong>HTML5 & CSS3</strong></td>
-                <td>
-                  Responsive layouts, semantic HTML, forms, navigation,
-                  media queries, Flexbox, and custom styling.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>ASP.NET Core MVC</strong></td>
-                <td>
-                  MVC architecture, controllers, models, views, routing,
-                  validation, forms, sessions, and database-driven applications.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>Entity Framework Core</strong></td>
-                <td>
-                  Database contexts, models, migrations, relationships,
-                  CRUD operations, and SQL Server integration.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>Bootstrap</strong></td>
-                <td>
-                  Responsive layouts, components, navigation, forms,
-                  and interface styling.
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="skill-tags">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>ASP.NET Core MVC</span>
+          <span>Bootstrap</span>
         </div>
+
+        <p>
+          Experience creating responsive interfaces and database-driven
+          applications using MVC architecture, models, views, controllers,
+          forms, routing, and validation.
+        </p>
+
       </section>
 
-      <section>
+
+      <section class="skill-card">
+
         <h2>Databases</h2>
 
-        <div class="centered-chart">
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th>Technology</th>
-                <th>Experience</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td><strong>SQL</strong></td>
-                <td>
-                  Queries, joins, aggregate functions, subqueries, CTEs,
-                  transactions, views, stored procedures, and database design.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>Microsoft SQL Server</strong></td>
-                <td>
-                  Relational database development and integration with
-                  ASP.NET Core and Entity Framework Core.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>MySQL</strong></td>
-                <td>
-                  Tables, relationships, constraints, procedures, functions,
-                  views, triggers, transactions, and data management.
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="skill-tags">
+          <span>SQL</span>
+          <span>MySQL</span>
+          <span>SQL Server</span>
+          <span>Entity Framework Core</span>
         </div>
+
+        <p>
+          Experience with relational database design, joins, queries,
+          relationships, constraints, views, stored procedures, functions,
+          transactions, and application database integration.
+        </p>
+
       </section>
 
-      <section>
-        <h2>Quality Assurance & Testing</h2>
 
-        <div class="centered-chart">
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th>Skill</th>
-                <th>Experience</th>
-              </tr>
-            </thead>
+      <section class="skill-card">
 
-            <tbody>
-              <tr>
-                <td><strong>Functional Testing</strong></td>
-                <td>
-                  Testing software behavior against expected functionality
-                  and identifying unexpected results.
-                </td>
-              </tr>
+        <h2>Quality Assurance</h2>
 
-              <tr>
-                <td><strong>Bug Reporting</strong></td>
-                <td>
-                  Documenting bugs with clear descriptions, reproduction steps,
-                  expected behavior, and observed behavior.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>Game Testing</strong></td>
-                <td>
-                  Remote testing experience evaluating gameplay, functionality,
-                  performance, usability, and player experience.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>Troubleshooting</strong></td>
-                <td>
-                  Diagnosing technical problems, isolating causes,
-                  testing solutions, and documenting results.
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="skill-tags">
+          <span>Functional Testing</span>
+          <span>Bug Reporting</span>
+          <span>Game Testing</span>
+          <span>Troubleshooting</span>
         </div>
+
+        <p>
+          Experience testing software behavior, identifying bugs,
+          reproducing issues, documenting results, and providing
+          feedback focused on functionality and user experience.
+        </p>
+
       </section>
 
-      <section>
+
+      <section class="skill-card">
+
         <h2>Development Tools</h2>
 
-        <div class="centered-chart">
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th>Tool</th>
-                <th>Experience</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td><strong>Visual Studio</strong></td>
-                <td>
-                  C#, ASP.NET Core MVC, debugging, project development,
-                  NuGet packages, and Entity Framework Core.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>Visual Studio Code</strong></td>
-                <td>
-                  HTML, CSS, JavaScript, source editing, and web development.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>IntelliJ IDEA</strong></td>
-                <td>
-                  Java application development, debugging, project organization,
-                  and testing.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>Git & GitHub</strong></td>
-                <td>
-                  Source control, repositories, commits, project hosting,
-                  and GitHub Pages.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>MySQL Workbench</strong></td>
-                <td>
-                  Database creation, queries, procedures, testing,
-                  and database administration tasks.
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="skill-tags">
+          <span>Visual Studio</span>
+          <span>VS Code</span>
+          <span>IntelliJ IDEA</span>
+          <span>Git</span>
+          <span>GitHub</span>
+          <span>MySQL Workbench</span>
         </div>
+
+        <p>
+          Hands-on experience developing, debugging, managing source
+          code, working with databases, and organizing software projects.
+        </p>
+
       </section>
 
-      <section>
+
+      <section class="skill-card">
+
         <h2>Professional Skills</h2>
 
-        <div class="centered-chart">
-          <table class="info-table">
-            <thead>
-              <tr>
-                <th>Skill</th>
-                <th>Strengths</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td><strong>Problem Solving</strong></td>
-                <td>
-                  Breaking down technical problems, testing possibilities,
-                  and working toward practical solutions.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>Communication</strong></td>
-                <td>
-                  Clear written documentation, customer communication,
-                  issue reporting, and explaining technical information.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>Organization</strong></td>
-                <td>
-                  Managing multiple responsibilities, detailed records,
-                  deadlines, and project requirements.
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>Microsoft 365</strong></td>
-                <td>
-                  Extensive experience with Word, Excel, PowerPoint,
-                  Outlook, and general office productivity tools.
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="skill-tags">
+          <span>Problem Solving</span>
+          <span>Communication</span>
+          <span>Organization</span>
+          <span>Documentation</span>
+          <span>Microsoft 365</span>
         </div>
+
+        <p>
+          Professional experience handling detailed information,
+          communicating clearly, troubleshooting problems, managing
+          responsibilities, and working independently.
+        </p>
+
       </section>
 
+
     </div>
+
   </main>
 
+
   <footer>
+
     <p>
       &copy; 2026 Mary Brown |
-      <a href="https://github.com/kinikki" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://github.com/kinikki"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         GitHub
       </a>
     </p>
+
   </footer>
 
 </body>
+
 </html>
