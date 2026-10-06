@@ -12,20 +12,18 @@ toggle.addEventListener('click', () => {
   setTheme(theme);
   try { localStorage.setItem('portfolio-theme', theme); } catch {}
 });
-const cases = { valid: 'Player1', empty: '', spaces: '   ', short: 'A', long: 'abcdefghijklmnopq', boundary: 'abcdefghijklmnop' };
-document.querySelector('#run-test').addEventListener('click', () => {
-  const input = cases[document.querySelector('#test-case').value];
-  const fixed = document.querySelector('#test-version').value === 'fixed';
-  const length = input.trim().length;
-  const expected = length >= 2 && length <= 16;
-  const actual = fixed ? expected : input.length >= 2;
-  document.querySelector('#test-status').textContent = actual === expected ? 'Working as expected' : 'Bug found';
-  document.querySelector('.lab-result').dataset.result = actual === expected ? 'pass' : 'fail';
-  document.querySelector('#test-input').textContent = JSON.stringify(input);
-  document.querySelector('#test-expected').textContent = expected ? 'Allow this username' : 'Show an error and reject it';
-  document.querySelector('#test-actual').textContent = actual ? 'The form allowed it' : 'The form rejected it';
-  document.querySelector('#test-note').textContent = fixed ? 'The fixed form ignores spaces at the beginning and end, then checks that the username has 2–16 characters.' : actual !== expected ? 'The broken form accepted something it should reject. A tester would report this input, what should happen, and what actually happened. Switch to “After the fix” and run it again.' : 'This example works. Try “Only spaces” with “Before the fix” to find a bug.';
-});
+const logPrint = document.querySelector('#log-print');
+const deletePrint = document.querySelector('#delete-print');
+function showPrint(logged) {
+  document.querySelector('#spool-balance').textContent = logged ? '860 g remaining' : '1,000 g remaining';
+  document.querySelector('#balance-note').textContent = logged
+    ? 'Print logged: 1,000 − 120 − 20 = 860 g. Now delete it to restore the balance.'
+    : 'Print deleted: 860 + 140 = 1,000 g. The spool is back to its starting balance.';
+  logPrint.disabled = logged;
+  deletePrint.disabled = !logged;
+}
+logPrint.addEventListener('click', () => showPrint(true));
+deletePrint.addEventListener('click', () => showPrint(false));
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
