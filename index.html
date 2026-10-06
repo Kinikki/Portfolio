@@ -7,10 +7,10 @@
   <meta name="theme-color" content="#10121b">
   <link rel="canonical" href="https://kinikki.github.io/Portfolio/">
   <meta property="og:title" content="Mary Brown | Developer & QA Tester">
-  <meta property="og:description" content="Software projects, game testing experience, and a hands-on QA demo.">
+  <meta property="og:description" content="Software projects, game testing experience, and an interactive PrintTrack walkthrough.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kinikki.github.io/Portfolio/">
-  <script src="js/home.js?v=20261006" defer></script>
+  <script src="js/home.js?v=20261006-printtrack" defer></script>
   <title>Mary Brown | Developer & QA Tester</title>
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/home.css?v=20261005">
@@ -19,7 +19,7 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="wordmark" href="index.html" aria-label="Mary Brown, home">Mary Brown<span>.</span></a>
-    <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#qa">Testing demo</a><a href="#about">About</a><a href="#contact">Contact</a></nav><button class="theme-toggle" type="button" aria-label="Switch to light theme">Light theme</button>
+    <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#qa">PrintTrack demo</a><a href="#about">About</a><a href="#contact">Contact</a></nav><button class="theme-toggle" type="button" aria-label="Switch to light theme">Light theme</button>
   </header>
   <main id="main">
     <section class="hero">
@@ -46,8 +46,8 @@
       <a class="more" href="https://github.com/Kinikki" target="_blank" rel="noopener noreferrer">More on GitHub</a>
     </section>
     <section class="section-wrap" id="qa">
-      <p class="eyebrow">02 / Testing demo</p><h2>See how a tester finds a bug.</h2><p class="section-intro">QA means quality assurance: checking that software does what it should. This example compares a deliberately broken username form with a fixed version. Choose “Only spaces,” click “Check this example,” then switch to “After the fix” and check again. This is an illustrative demo, not a report from my contract work.</p>
-      <div class="lab-grid"><div class="lab-controls"><h3>Test a username field</h3><label for="test-case">1. Choose an example</label><select id="test-case"><option value="valid">Valid username: Player1</option><option value="empty">Nothing entered</option><option value="spaces">Only spaces</option><option value="short">Too short: A</option><option value="long">Too long: 17 characters</option><option value="boundary">Exactly 16 characters (allowed)</option></select><label for="test-version">2. Choose the form version</label><select id="test-version"><option value="buggy">Before the fix (has bugs)</option><option value="fixed">After the fix</option></select><p class="rule">A username must contain 2–16 characters after removing spaces at the beginning and end.</p><button class="button" id="run-test" type="button">Check this example</button></div><div class="lab-result" role="status" aria-live="polite" aria-atomic="true"><p class="eyebrow">Test result</p><h3 id="test-status">Choose an example to begin</h3><dl><dt>Entered</dt><dd id="test-input">Choose a case to begin.</dd><dt>Should happen</dt><dd id="test-expected">Not run yet</dd><dt>Did happen</dt><dd id="test-actual">Not run yet</dd></dl><p id="test-note">A form should reject a username made entirely of spaces. Does this version catch it?</p></div></div>
+      <p class="eyebrow">02 / PrintTrack walkthrough</p><h2>See how PrintTrack works.</h2><p class="section-intro">Try the material calculation below. A print uses material and produces waste, so both come off the spool. This interactive example runs in your browser and illustrates the local app's behavior.</p>
+      <div class="lab-grid"><div class="lab-controls"><h3>Log a sample print</h3><p class="rule">Starting spool: 1,000 g<br>Desk organizer: 120 g material + 20 g waste</p><button class="button" id="log-print" type="button">Log this print</button><p><button class="button" id="delete-print" type="button" disabled>Delete print & restore material</button></p><p>You can repeat the example after deleting the print.</p></div><div class="lab-result" role="status" aria-live="polite" aria-atomic="true" data-result="pass"><p class="eyebrow">Spool balance</p><h3 id="spool-balance">1,000 g remaining</h3><dl><dt>Material</dt><dd>120 g</dd><dt>Waste</dt><dd>20 g</dd><dt>Total used</dt><dd>140 g per print</dd></dl><p id="balance-note">Click “Log this print” to subtract 140 g.</p><p class="rule">Testing check: logging should leave 860 g. Deleting should restore 1,000 g. Both behaviors were verified in the application.</p></div></div>
     </section>
     <section class="section-wrap" id="about">
       <p class="eyebrow">03 / Background & skills</p><h2>Curious by default</h2>
