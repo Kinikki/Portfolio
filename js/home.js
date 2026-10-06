@@ -12,19 +12,19 @@ toggle.addEventListener('click', () => {
   setTheme(theme);
   try { localStorage.setItem('portfolio-theme', theme); } catch {}
 });
-const cases = { valid: 'Quinn', empty: '', spaces: '   ', short: 'Q', long: 'abcdefghijklmnopq', boundary: 'abcdefghijklmnop' };
+const cases = { valid: 'Player1', empty: '', spaces: '   ', short: 'A', long: 'abcdefghijklmnopq', boundary: 'abcdefghijklmnop' };
 document.querySelector('#run-test').addEventListener('click', () => {
   const input = cases[document.querySelector('#test-case').value];
   const fixed = document.querySelector('#test-version').value === 'fixed';
   const length = input.trim().length;
   const expected = length >= 2 && length <= 16;
   const actual = fixed ? expected : input.length >= 2;
-  document.querySelector('#test-status').textContent = actual === expected ? 'PASS · Behavior matches' : 'FAIL · Bug reproduced';
+  document.querySelector('#test-status').textContent = actual === expected ? 'Working as expected' : 'Bug found';
   document.querySelector('.lab-result').dataset.result = actual === expected ? 'pass' : 'fail';
   document.querySelector('#test-input').textContent = JSON.stringify(input);
-  document.querySelector('#test-expected').textContent = expected ? 'Accept username' : 'Reject username';
-  document.querySelector('#test-actual').textContent = actual ? 'Accepted username' : 'Rejected username';
-  document.querySelector('#test-note').textContent = fixed ? 'The corrected check trims whitespace and enforces both length limits.' : actual !== expected ? 'Reproduction: choose this input and submit. The original check only enforces a minimum raw length, allowing whitespace and overlong names.' : 'This case passes. Try spaces only or an overlong name to probe the missing checks.';
+  document.querySelector('#test-expected').textContent = expected ? 'Allow this username' : 'Show an error and reject it';
+  document.querySelector('#test-actual').textContent = actual ? 'The form allowed it' : 'The form rejected it';
+  document.querySelector('#test-note').textContent = fixed ? 'The fixed form ignores spaces at the beginning and end, then checks that the username has 2–16 characters.' : actual !== expected ? 'The broken form accepted something it should reject. A tester would report this input, what should happen, and what actually happened. Switch to “After the fix” and run it again.' : 'This example works. Try “Only spaces” with “Before the fix” to find a bug.';
 });
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(entries => {
